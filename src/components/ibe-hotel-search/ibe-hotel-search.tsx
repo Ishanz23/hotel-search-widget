@@ -6,7 +6,7 @@ import { SearchData } from '../../models/SearchData';
 })
 export class IBEHotelSearchView {
   @Prop() propertyId: string = '654671';
-  @Prop() lang: string = 'EN';
+  @Prop() language: string = 'EN';
   @Prop() url: string = 'https://loumageseef.seebooking.com';
 
   @Prop() bgColor: string = '#0078d4';
@@ -16,7 +16,7 @@ export class IBEHotelSearchView {
   onSearched(event: CustomEvent<SearchData>) {
     const { checkin, checkout, noOfAdults, noOfChildren, noOfRooms } = event.detail;
     const url = `${this.url}/#/roomlist?checkin=${encodeURIComponent(checkin)}&checkout=${encodeURIComponent(checkout)}&lang=${
-      this.lang
+      this.language
     }&noOfAdults=${noOfAdults}&noOfChildren=${noOfChildren}&noOfRooms=${noOfRooms}&property_id=${this.propertyId}`;
     window.open(url, '_blank');
   }

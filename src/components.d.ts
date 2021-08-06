@@ -9,7 +9,7 @@ import { SearchData } from "./models/SearchData";
 export namespace Components {
     interface IbeHotelSearch {
         "bgColor": string;
-        "lang": string;
+        "language": string;
         "propertyId": string;
         "textColor": string;
         "url": string;
@@ -62,7 +62,7 @@ declare global {
 declare namespace LocalJSX {
     interface IbeHotelSearch {
         "bgColor"?: string;
-        "lang"?: string;
+        "language"?: string;
         "propertyId"?: string;
         "textColor"?: string;
         "url"?: string;

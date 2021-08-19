@@ -10,7 +10,7 @@
 | Property     | Attribute     | Description | Type     | Default                                |
 | ------------ | ------------- | ----------- | -------- | -------------------------------------- |
 | `bgColor`    | `bg-color`    |             | `string` | `'#0078d4'`                            |
-| `lang`       | `lang`        |             | `string` | `'EN'`                                 |
+| `language`   | `language`    |             | `string` | `'EN'`                                 |
 | `propertyId` | `property-id` |             | `string` | `'654671'`                             |
 | `textColor`  | `text-color`  |             | `string` | `'#fff'`                               |
 | `url`        | `url`         |             | `string` | `'https://loumageseef.seebooking.com'` |

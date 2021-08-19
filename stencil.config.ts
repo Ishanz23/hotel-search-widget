@@ -2,6 +2,7 @@ import { Config } from '@stencil/core';
 
 export const config: Config = {
   namespace: 'hotel-search-widget',
+  globalStyle: 'src/global/styles.css',
   outputTargets: [
     {
       type: 'dist',

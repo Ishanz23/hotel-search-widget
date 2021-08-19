@@ -1,6 +1,5 @@
-import { Component, Prop, Listen, h } from '@stencil/core';
+import { Component, Prop, h } from '@stencil/core';
 import { SearchData } from '../../models/SearchData';
-
 @Component({
   tag: 'ibe-hotel-search',
 })
@@ -12,7 +11,6 @@ export class IBEHotelSearchView {
   @Prop() bgColor: string = '#0078d4';
   @Prop() textColor: string = '#fff';
 
-  @Listen('onSearched')
   onSearched(event: CustomEvent<SearchData>) {
     const { checkin, checkout, noOfAdults, noOfChildren, noOfRooms } = event.detail;
     const url = `${this.url}/#/roomlist?checkin=${encodeURIComponent(checkin)}&checkout=${encodeURIComponent(checkout)}&lang=${
@@ -22,6 +20,6 @@ export class IBEHotelSearchView {
   }
 
   render() {
-    return <ibe-hotel-search-view bgColor={this.bgColor} textColor={this.textColor}></ibe-hotel-search-view>;
+    return <ibe-hotel-search-view bgColor={this.bgColor} textColor={this.textColor} onSearched={e => this.onSearched(e)}></ibe-hotel-search-view>;
   }
 }

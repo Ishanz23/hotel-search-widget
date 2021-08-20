@@ -7,8 +7,8 @@ import { addDay, formatDate } from '../../util/date-format';
   styleUrl: 'ibe-hotel-search-view.css',
 })
 export class IBEHotelSearchView {
-  @State() checkin: string = formatDate(addDay(new Date(), 7));
-  @State() checkout: string = formatDate(addDay(new Date(), 9));
+  @State() checkin: string = formatDate(addDay(new Date(), 1));
+  @State() checkout: string = formatDate(addDay(new Date(), 2));
   @State() noOfAdults: number = 2;
   @State() noOfChildren: number = 0;
   @State() noOfRooms: number = 1;
@@ -35,7 +35,7 @@ export class IBEHotelSearchView {
   onCheckinDateUpdate(event: any) {
     this.checkin = event.target.value;
     if (new Date(this.checkin) >= new Date(this.checkout)) {
-      console.log('invalid');
+      this.checkout = formatDate(addDay(new Date(this.checkin)));
     }
   }
   onCheckoutDateUpdate(event: any) {

@@ -7,6 +7,14 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { SearchData } from "./models/SearchData";
 export namespace Components {
+    interface IbeDownarrowIcon {
+    }
+    interface IbeGuests {
+        "alt": string;
+        "image": string;
+    }
+    interface IbeGuestsIcon {
+    }
     interface IbeHotelSearch {
         "bgColor": string;
         "language": string;
@@ -35,6 +43,24 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLIbeDownarrowIconElement extends Components.IbeDownarrowIcon, HTMLStencilElement {
+    }
+    var HTMLIbeDownarrowIconElement: {
+        prototype: HTMLIbeDownarrowIconElement;
+        new (): HTMLIbeDownarrowIconElement;
+    };
+    interface HTMLIbeGuestsElement extends Components.IbeGuests, HTMLStencilElement {
+    }
+    var HTMLIbeGuestsElement: {
+        prototype: HTMLIbeGuestsElement;
+        new (): HTMLIbeGuestsElement;
+    };
+    interface HTMLIbeGuestsIconElement extends Components.IbeGuestsIcon, HTMLStencilElement {
+    }
+    var HTMLIbeGuestsIconElement: {
+        prototype: HTMLIbeGuestsIconElement;
+        new (): HTMLIbeGuestsIconElement;
+    };
     interface HTMLIbeHotelSearchElement extends Components.IbeHotelSearch, HTMLStencilElement {
     }
     var HTMLIbeHotelSearchElement: {
@@ -54,12 +80,23 @@ declare global {
         new (): HTMLMyComponentElement;
     };
     interface HTMLElementTagNameMap {
+        "ibe-downarrow-icon": HTMLIbeDownarrowIconElement;
+        "ibe-guests": HTMLIbeGuestsElement;
+        "ibe-guests-icon": HTMLIbeGuestsIconElement;
         "ibe-hotel-search": HTMLIbeHotelSearchElement;
         "ibe-hotel-search-view": HTMLIbeHotelSearchViewElement;
         "my-component": HTMLMyComponentElement;
     }
 }
 declare namespace LocalJSX {
+    interface IbeDownarrowIcon {
+    }
+    interface IbeGuests {
+        "alt"?: string;
+        "image"?: string;
+    }
+    interface IbeGuestsIcon {
+    }
     interface IbeHotelSearch {
         "bgColor"?: string;
         "language"?: string;
@@ -88,6 +125,9 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface IntrinsicElements {
+        "ibe-downarrow-icon": IbeDownarrowIcon;
+        "ibe-guests": IbeGuests;
+        "ibe-guests-icon": IbeGuestsIcon;
         "ibe-hotel-search": IbeHotelSearch;
         "ibe-hotel-search-view": IbeHotelSearchView;
         "my-component": MyComponent;
@@ -97,6 +137,9 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "ibe-downarrow-icon": LocalJSX.IbeDownarrowIcon & JSXBase.HTMLAttributes<HTMLIbeDownarrowIconElement>;
+            "ibe-guests": LocalJSX.IbeGuests & JSXBase.HTMLAttributes<HTMLIbeGuestsElement>;
+            "ibe-guests-icon": LocalJSX.IbeGuestsIcon & JSXBase.HTMLAttributes<HTMLIbeGuestsIconElement>;
             "ibe-hotel-search": LocalJSX.IbeHotelSearch & JSXBase.HTMLAttributes<HTMLIbeHotelSearchElement>;
             "ibe-hotel-search-view": LocalJSX.IbeHotelSearchView & JSXBase.HTMLAttributes<HTMLIbeHotelSearchViewElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;

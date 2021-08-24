@@ -19,5 +19,4 @@ export const config: Config = {
       serviceWorker: null, // disable service workers
     },
   ],
-  bundles: [{ components: ['ibe-hotel-search', 'ibe-hotel-search-view'] }],
 };

@@ -32,6 +32,10 @@ export class IBEHotelSearchView {
     }
   }
 
+  connectedCallback() {
+    this.checkValidity();
+  }
+
   onCheckinDateUpdate(event: any) {
     this.checkin = event.target.value;
     if (new Date(this.checkin) >= new Date(this.checkout)) {
@@ -151,9 +155,9 @@ export class IBEHotelSearchView {
           </div>
           <div id="guest-popover" class="rooms-guests">
             <div class="summary" onClick={this.onRoomGuestsToggle.bind(this)}>
-              <img src="../../assets/icons/icon-guests.png" alt="" />
+              <ibe-guests-icon></ibe-guests-icon>
               <span class="caption">{`${this.noOfRooms} rooms, ${this.noOfAdults} adults, ${this.noOfChildren} children`}</span>
-              <img src="../../assets/icons/icon-downarrow.png" alt="" />
+              <ibe-downarrow-icon></ibe-downarrow-icon>
             </div>
             {this.hideRoom ? null : (
               <div class="inputs">

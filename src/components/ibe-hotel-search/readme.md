@@ -26,6 +26,8 @@
 ```mermaid
 graph TD;
   ibe-hotel-search --> ibe-hotel-search-view
+  ibe-hotel-search-view --> ibe-guests-icon
+  ibe-hotel-search-view --> ibe-downarrow-icon
   style ibe-hotel-search fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

@@ -16,9 +16,9 @@
 
 ## Events
 
-| Event        | Description | Type                      |
-| ------------ | ----------- | ------------------------- |
-| `onSearched` |             | `CustomEvent<SearchData>` |
+| Event      | Description | Type                      |
+| ---------- | ----------- | ------------------------- |
+| `searched` |             | `CustomEvent<SearchData>` |
 
 
 ## Dependencies
@@ -27,9 +27,16 @@
 
  - [ibe-hotel-search](../ibe-hotel-search)
 
+### Depends on
+
+- [ibe-guests-icon](../assets)
+- [ibe-downarrow-icon](../assets)
+
 ### Graph
 ```mermaid
 graph TD;
+  ibe-hotel-search-view --> ibe-guests-icon
+  ibe-hotel-search-view --> ibe-downarrow-icon
   ibe-hotel-search --> ibe-hotel-search-view
   style ibe-hotel-search-view fill:#f9f,stroke:#333,stroke-width:4px
 ```

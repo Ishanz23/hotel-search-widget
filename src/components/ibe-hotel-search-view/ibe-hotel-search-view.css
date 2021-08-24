@@ -23,6 +23,7 @@ form {
 }
 
 .rooms-guests {
+  min-width: 18rem;
   width: 100%;
   position: relative;
   background-color: white;
@@ -31,6 +32,9 @@ form {
 }
 .summary {
   padding: 0.95rem 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .caption {
   padding: 0 0.5rem;
@@ -74,6 +78,7 @@ form {
 
 @media screen and (min-width: 1080px) {
   form {
+    min-width: 1000px;
     flex-direction: row;
     align-items: center;
     justify-content: center;
